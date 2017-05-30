@@ -1,0 +1,403 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@mixin authenticate_section{
+	display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+		text-align: left;
+}
+
+*{
+	&:focus{
+		outline: none;
+	}
+}
+
+html{
+		background: transparent;
+		border: 0;
+		font-size: 100%;
+		margin: 0;
+		outline: 0;
+		padding: 0;
+		vertical-align: baseline;
+}
+
+body{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	#sign_up{		
+		@include authenticate_section;
+	}
+	#sign_in{
+		@include authenticate_section;
+	}
+	.navbar{
+		background: #2d348a;
+		border: none;
+	}
+}
+
+a{
+	&:hover{
+		background-color: transparent;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+
+/*-----------------------------------------------------------------------------*/
+/* universal */
+
+body {
+	padding-top: 60px;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+}
+
+.center h1 {
+	margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: normal;
+	color: #fbfbfb;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+input {
+	height: auto !important;
+}
+
+select#image_created_at_1i, select#image_created_at_2i, select#image_created_at_3i, select#image_created_at_4i, select#image_created_at_5i {
+	width: 10%;
+}
+
+form{
+	display: inline-block;
+	margin-top: 10px;
+	.search-box{
+		background-color: white;
+		border-radius: 3px;
+		padding: 5px 5px;
+		width: 200px;
+		margin-bottom: 0;
+		vertical-align: center;
+		color: black;
+	}
+}
+
+nav{
+	display: inline-block;
+	float: right;
+}
+
+header.navbar.navbar-fixed-top.navbar-inverse{
+	background-color: #1d2152;
+	display: block;
+}
+
+div.container.main-content{
+	padding-bottom: 45px;
+}
+
+.images-list{
+	img{
+		width: 300px;
+		height: 300px;
+	}
+}
+
+.post{
+	width: 600px;
+	margin: 20px auto 45px auto;
+	border: 1px solid #dbdbdb;
+	border-radius: 5px;
+	box-shadow: 0 1px 0 1px #d0d0d0;
+	display: inline-block;
+	background-color: #fafafa;
+	.post-info{
+		width: 100%;
+		padding: 10px 10px;
+		display: inline-block;
+		.user-email{
+			display: inline-block;
+			float: left;
+			margin-left: 20px;
+			margin-top: 20px;
+			color: black;
+		}
+		.time-stamp{
+			display: inline-block;
+			float: right;
+			color: black;
+			margin-top: 20px;
+		}
+		.avatar{
+			display: inline-block;
+			float: left;
+			img{
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+	.image{
+		width: 100%;
+		img{
+			width: 100%;
+			height: 500px;
+			display: inline-block;
+		}
+	}
+	.like-statis{
+		float: left;
+		font-weight: bold;
+		width: 100%;
+		display: inline-block;
+		padding: 15px 20px 5px 20px;
+		text-align: left;
+	}
+	.comments-path{
+		padding: 10px 10px;
+		.comments-list{
+			.comment{
+				display: inline-block;
+				width: 100%;
+				padding: 5px 5px;
+				.user-avatar{
+					float: left;
+					margin-right: 10px;
+					img{
+						border-radius: 50%;
+						width: 40px;
+						height: 40px;
+					}
+				}
+				.content{
+					float: left;
+				}
+				.config{
+					float: right;
+				}
+			}
+		}
+		.like-form{
+			width: 30px;
+			text-align: left;
+			float: left;
+			background-color: white;
+			padding-bottom: 10px;
+			padding-left: 5px;
+			button{
+				border: none;
+				background-color: transparent;
+			}
+		}
+		.comment-form{
+			float: left;
+			width: calc(100% - 30px);
+			display: inline-block;
+			background-color: white;
+			margin-bottom: 10px;
+			form{
+				width: 100%;
+				margin: 5px 0 10px 10px;
+				.field{
+					margin-bottom: 0;
+					.comment-text-field{
+						border: none;
+						width: 100%;
+						padding: 5px 5px;
+						background-color: transparent;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+img.user-avatar{
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+.edit_user{
+	img{
+		height: 500px;
+		width: 500px;
+	}
+}
+button.btn.btn-default{
+	-webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin-right: 8px;
+}
+
+/* Comments CSS */
+/*Comment List styles*/
+.comment-list .row {
+  margin-bottom: 0px;
+}
+.comment-list .panel .panel-heading {
+  padding: 4px 15px;
+  position: absolute;
+  border:none;
+  /*Panel-heading border radius*/
+  border-top-right-radius:0px;
+  top: 1px;
+}
+.comment-list .panel .panel-heading.right {
+  border-right-width: 0px;
+  /*Panel-heading border radius*/
+  border-top-left-radius:0px;
+  right: 16px;
+}
+.comment-list .panel .panel-heading .panel-body {
+  padding-top: 6px;
+}
+.comment-list figcaption {
+  /*For wrapping text in thumbnail*/
+  word-wrap: break-word;
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 768px) {
+  .comment-list .arrow:after, .comment-list .arrow:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+  .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
+    border-left: 0;
+  }
+  /*****Left Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.left:before {
+    left: 0px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-right-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.left:after {
+    left: 1px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-right-color: #FFFFFF;
+    border-width: 15px;
+  }
+  /*****Right Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.right:before {
+    right: -16px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-left-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.right:after {
+    right: -14px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-left-color: #FFFFFF;
+    border-width: 15px;
+  }
+}
+.comment-list .comment-post {
+  margin-top: 6px;
+}
+
+#result-box{display: none; max-height: 300px; overflow-y: auto; overflow-x: hidden; position: absolute; background-color: #fff; border: 1px solid #d083cf; border-top: 0; width: 199px; max-height: 300px; line-height: 2em; font-size: 14px;}
+#result-box > a {color: black; display: block;}
+#result-box > a:hover {color: black; background-color: #ccc;}
